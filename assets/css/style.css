@@ -1,0 +1,632 @@
+/************ Resets ************/
+* { box-sizing: border-box; }
+
+body, 
+h1, 
+h2, 
+h3, 
+h4, 
+p, 
+ul, 
+li {
+	margin: 0;
+	padding: 0;
+}
+
+ul, 
+ol {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a { text-decoration: none; }
+
+/************ Typography ************/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+/************ Generic styles ************/
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #2f4858;
+}
+
+header {
+  background-color: #fff;
+}
+
+.h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button {
+  color: #fff;
+  background: #ffa800;
+  padding: 0.7rem 3rem;
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #ffcB66;
+}
+
+.button:active {
+  background: #ff8a00;
+}
+
+/************ Navigation ************/
+
+.navbar-light .navbar-nav .nav-link {
+  color: #060606;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-left: 3.33rem;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.nav-item {
+  margin: 1.7rem 0.6rem 0 0.6rem;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  margin-right: 3.3rem;
+}
+
+.navbar-light .close-icon {
+  background-image: url("../img/close.svg");
+  display: inline-block;
+  width: 1.11rem;
+  height: 1.11rem;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 3.3rem;
+}
+
+.navbar-toggler.collapsed .close-icon {
+  display: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  display: none;
+}
+
+/************ Ripped paper effect ************/
+
+.ripped-down-header {
+  width: 100%;
+  position: absolute; 
+  transform: rotateX(180deg);
+  align-self: flex-end;
+  margin-bottom: -3.8%;
+}
+
+.ripped-up {
+  width: 100%;
+  position: absolute;
+  transform: rotateX(180deg);
+  margin-top: -1%;
+  align-self: flex-start;
+}
+
+.ripped-bottom {
+  width: 100%;
+  position: absolute;
+  align-self: flex-end;
+}
+
+/************ Video ************/
+
+.video-container {
+  position: relative;
+  bottom: 2.7rem;
+  z-index: -100;
+}
+
+.video-container img{
+  z-index: -100;
+  width: 100%;
+  height: 80%;
+}
+/************ Goals ************/
+
+.goals-text {
+  width: 48%;
+  height: auto;
+  text-align: center;
+  margin: 5.9rem auto 9.5rem auto;
+  line-height: 1.22rem;
+}
+
+/************ Dreams ************/
+
+.dreams-container {
+  margin: 0 auto;
+  width: 72%;
+  padding: 8.33rem 0 6.39rem 0;
+}
+
+.dreams-container-inner {
+  width: 46%
+}
+
+.dreams-container-inner p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-bottom: 2.2rem;
+}
+
+.dreams-container-inner a {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.dreams-container-inner a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/************ Form ************/
+
+.form-container {
+  width: 45.5%;
+  margin: 2rem auto 8.3rem auto;
+  font-size: 1.333rem;
+}
+
+.form-container .h3{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  margin-bottom: 3.5rem;
+}
+
+.form-control {
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 0.333rem;
+  border: 2px solid rgba(196, 196, 196, 0.4);
+  margin-bottom: 0.75rem;
+  font-weight: normal;
+}
+
+.form-control::placeholder {
+  color: #2F4858;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid rgba(196, 196, 196, 0.4);
+}
+
+textarea {
+  resize: none;
+}
+
+.form-info {
+  font-size: 0.77rem;
+  text-align: left;
+}
+
+.form-check-input {
+  margin-left: -1rem;
+}
+
+input[type="checkbox"] 
+{
+  background-color: rgba(196, 196, 196, 0.4);
+  border-radius: 0.11rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked
+{
+  background-color: #ffa800;
+  background: #ffa800 url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+}
+
+.form-container .button {
+  padding: 0.95rem 3.5rem;
+}
+
+/************ Supporters ************/
+
+.supporters {
+  background: #ffcb66;
+}
+
+.supporters .h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 1.333rem;
+  margin-top: 5.7rem;
+}
+
+.supporters-inner {
+  margin: 3.3rem auto 7rem auto;
+  width: 100%;
+}
+
+.supporters-inner img {
+  width: 17%;
+  margin: 0 2.3rem;
+}
+
+.supporters-inner .logo {
+  width: 6%;
+}
+
+/************ Footer ************/
+
+footer {
+  background: #2f4858;
+  color: #fff;
+}
+
+.footer-inner {
+  padding-top: 4.5rem;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer-menu li {
+  margin-bottom: 0.88rem;
+}
+
+.footer-bank-info p,
+.footer-contacts p {
+  margin-bottom: 0.45rem;
+}
+
+.footer-logo .h4 {
+  margin-bottom: 1.22rem;
+}
+
+.footer-logo .h4,
+.footer-details {
+  display: none;
+}
+
+.footer-icons {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.copyright {
+  font-size: 0.777rem;
+  padding: 0 3.44rem 1rem 3.44rem;
+}
+
+.copyright p:first-child {
+  width: 14%;
+}
+
+@media only screen and (max-width: 770px) {
+
+  .navbar-nav .nav-item .active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #FFA800;
+    text-decoration-thickness: 0.167rem;
+    text-underline-position: under;
+  }
+
+  .navbar-brand img {
+    width: 80%;
+  }
+
+  .navbar-nav {
+    margin: 5.33rem 0 8.33rem 0;
+    font-size: 1.33rem;
+    font-weight: 500;
+  }
+
+  .nav-link {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+  }
+
+  .lang-menu a {
+    display: inline-block;
+    margin: 0 2.44rem;
+  }
+  
+  .goals-text {
+    width: 80%;
+    margin: 8.33rem auto;
+  }
+
+  .dreams-container {
+    width: 70%;
+  }
+
+  .dreams-container-inner {
+    width: 40%;
+  }
+
+  .dreams-container-inner p {
+    font-size: 1rem;
+  }
+
+  .dreams-container-inner a {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 80%;
+  }
+
+  .supporters-inner {
+    margin: 1.3rem auto 3rem auto;
+  }
+
+  .supporters .h3 {
+    margin-top: 2.7rem;
+  }
+
+  .footer-logo img {
+    width: 90%;
+  }
+
+  .footer-logo .h4 {
+    display: block;
+    padding-top: 1.39rem;
+  }
+
+  .footer-menu,
+  .footer-bank-info {
+    display: none;
+  }
+
+  .footer-contacts .h4 {
+    visibility: hidden;
+  }
+  .footer-details {
+    display: block;
+  }
+
+  .footer-icons {
+    height: 30%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .copyright {
+    font-size: 0.89rem;
+  }
+  
+  .copyright p:first-child {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .navbar-light .navbar-toggler-icon,
+  .navbar-light .close-icon {
+    margin-right: 0;
+  }
+
+  .navbar-nav {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 50%;
+  }
+
+  .navbar-nav {
+    margin: 0 0 3rem 0;
+  }
+
+  .navbar-nav a {
+    margin: 0 1rem;
+  }
+
+  .video-container {
+    position: static;
+  }
+
+  .goals-text {
+    font-size: .667rem;
+    width: 90%;
+    margin: 4.44rem auto;
+    line-height: 0.8rem;
+  }
+
+  .image-container {
+    flex-wrap: wrap-reverse;
+    align-items: center;
+  }
+
+  .image-container div:nth-child(2),
+  .image-container div:nth-child(3) {
+    max-width: 50%;
+  }
+
+  .image-container div:nth-child(4) {
+    max-width: 43.5%;
+  }
+
+  .image-container div:nth-child(5) {
+    max-width: 56.5%;
+  }
+
+  .image-container .ripped-up {
+    transform: rotateY(-180deg);
+    margin-top: 0.1rem;
+  }
+  
+  .image-container .ripped-bottom {
+    transform: rotateX(180deg);
+    margin-top: -0.3rem;
+  }
+
+  .dreams-container {
+    max-width: 87.5%;
+    padding: 6.67rem 0;
+  }
+
+  .dreams-container .dreams-container-inner:nth-child(2) {
+    margin-top: 4.44rem;
+  }
+
+  .dreams-container-inner {
+    flex-basis: 100%;
+  } 
+
+  .dreams-container-inner p {
+    padding-bottom: 1.667rem;
+  }
+
+  .dreams-container-inner a {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .form-container .h3{
+    font-size: 1.33rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    padding: 0.1rem 0.5rem;
+  }
+
+  .form-control::placeholder {
+    font-size: 0.77rem;
+  }
+  .form-info {
+    font-size: 0.66rem;
+  }
+
+  .supporters .h3 {
+    margin: 3rem 0;
+  }
+
+  .supporters-inner {
+    margin: 0 auto 3rem 0;
+    max-width: 100%;
+  }
+
+  .supporters-inner img {
+    width: 40%;
+    margin: 0;
+  }
+
+  .supporters-inner .logo {
+    width: 15%;
+  }
+
+  .footer-inner {
+    margin-left: 1.11rem;
+    padding-top: 2rem;
+  }
+
+  .footer-logo img {
+    width: 55%;
+  }
+
+  footer .h4 {
+    font-size: 1rem;
+  }
+
+  .footer-contacts p {
+    font-size: 0.667rem;
+  }
+
+  .footer-details {
+    font-size: 0.778rem;
+  }
+
+  .footer-icons {
+    height: 38%;
+  }
+
+  .copyright {
+    font-size: 0.611rem;
+    padding: 0;
+  }
+  
+  .copyright p:first-child {
+    width: 100%;
+  }
+
+  .copyright {
+    margin-left: 1.11rem;
+  }
+
+
+
+
+
+
+
+
+  
+}
+
+
