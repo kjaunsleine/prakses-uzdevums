@@ -445,7 +445,11 @@ footer a {
   .footer-details {
     display: block;
   }
-
+	
+  .footer-details:hover {
+    color: #fff;
+  }
+	
   .footer-icons {
     height: 30%;
     padding-top: 1.5rem;
