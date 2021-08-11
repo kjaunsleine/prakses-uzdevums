@@ -81,7 +81,7 @@ button:focus {
 .button {
   color: #fff;
   background: #ffa800;
-  padding: 0.7rem 3rem;
+  padding: 0.65rem 3rem;
   border-radius: 2rem;
   border: none;
   text-align: center;
@@ -147,7 +147,7 @@ button:focus {
   position: absolute; 
   transform: rotateX(180deg);
   align-self: flex-end;
-  margin-bottom: -3.8%;
+  top: 95%;
 }
 
 .ripped-up {
@@ -162,6 +162,7 @@ button:focus {
   width: 100%;
   position: absolute;
   align-self: flex-end;
+  margin-top: 0.3%;
 }
 
 /************ Video ************/
@@ -190,33 +191,26 @@ button:focus {
 /************ Dreams ************/
 
 .dreams-container {
-  margin: 0 auto;
-  width: 72%;
-  padding: 8.33rem 0 6.39rem 0;
-}
-
-.dreams-container-inner {
-  width: 46%
+  padding: 8.33rem 0 6.39rem 0; 
+  max-width: 75%;
 }
 
 .dreams-container-inner p {
   font-family: 'Oswald', sans-serif;
-  font-weight: bold;
-  font-size: 1.4rem;
-  padding-bottom: 2.2rem;
+  font-weight: 500;
+  font-size: 1.33rem;
+  padding-bottom: 2.30rem;
 }
 
 .dreams-container-inner a {
   display: inline-block;
-  width: 50%;
-  text-align: center;
+  width: 12.94rem;
 }
 
 .dreams-container-inner a:hover {
   color: #fff;
   text-decoration: none;
 }
-
 
 /************ Form ************/
 
@@ -228,8 +222,9 @@ button:focus {
 
 .form-container .h3{
   font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 3.5rem;
+  font-size: 1.67rem;
 }
 
 .form-control {
@@ -237,7 +232,6 @@ button:focus {
   border-radius: 0.333rem;
   border: 2px solid rgba(196, 196, 196, 0.4);
   margin-bottom: 0.75rem;
-  font-weight: normal;
 }
 
 .form-control::placeholder {
@@ -267,8 +261,6 @@ input[type="checkbox"]
   background-color: rgba(196, 196, 196, 0.4);
   border-radius: 0.11rem;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   width: 1rem;
   height: 1rem;
   cursor: pointer;
@@ -292,7 +284,7 @@ input[type=checkbox]:checked
 
 .supporters .h3 {
   font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.333rem;
   margin-top: 5.7rem;
 }
@@ -309,6 +301,7 @@ input[type=checkbox]:checked
 
 .supporters-inner .logo {
   width: 6%;
+  margin-top: 0.7rem;
 }
 
 /************ Footer ************/
@@ -358,7 +351,26 @@ footer a {
   width: 14%;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1200px) {
+
+  .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .navbar-brand img{
+    max-width: 80%;
+  }
+
+  .nav-item {
+    margin: 0.1rem 0.3rem 0 0.3rem;
+  }
+
+  .navbar-nav {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
 
   .navbar-nav .nav-item .active {
     font-weight: 700;
@@ -368,10 +380,6 @@ footer a {
     text-underline-position: under;
   }
 
-  .navbar-brand img {
-    width: 80%;
-  }
-
   .navbar-nav {
     margin: 5.33rem 0 8.33rem 0;
     font-size: 1.33rem;
@@ -379,8 +387,7 @@ footer a {
   }
 
   .nav-link {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 3.5rem;
     padding-bottom: 0;
   }
 
@@ -395,21 +402,15 @@ footer a {
   }
 
   .dreams-container {
-    width: 70%;
+    max-width: 100%;
   }
-
+  
   .dreams-container-inner {
-    width: 40%;
-  }
+    flex-basis: 35%;
+  } 
 
   .dreams-container-inner p {
     font-size: 1rem;
-  }
-
-  .dreams-container-inner a {
-    display: inline-block;
-    width: auto;
-    text-align: center;
   }
 
   .form-container {
@@ -460,7 +461,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 576px) {
 
   .navbar-light .navbar-toggler-icon,
   .navbar-light .close-icon {
@@ -469,6 +470,7 @@ footer a {
 
   .navbar-nav {
     font-size: 1rem;
+    margin: 3.78rem 0;
   }
 
   .navbar-brand {
@@ -476,15 +478,15 @@ footer a {
   }
 
   .navbar-brand img {
-    width: 50%;
+    max-width: 50%;
   }
 
-  .navbar-nav {
-    margin: 0 0 3rem 0;
+  .nav-link {
+    margin: 1.75rem 0 0 0;
   }
 
-  .navbar-nav a {
-    margin: 0 1rem;
+  .lang-menu a {
+    margin: 0 1.33rem;
   }
 
   .video-container {
@@ -513,12 +515,13 @@ footer a {
   }
 
   .image-container div:nth-child(5) {
-    max-width: 56.5%;
+    max-width: 56.4%;
   }
 
   .image-container .ripped-up {
     transform: rotateY(-180deg);
-    margin-top: 0.1rem;
+    margin-bottom: -0.1rem;
+    margin-top: 0;
   }
   
   .image-container .ripped-bottom {
@@ -527,7 +530,6 @@ footer a {
   }
 
   .dreams-container {
-    max-width: 87.5%;
     padding: 6.67rem 0;
   }
 
@@ -535,18 +537,10 @@ footer a {
     margin-top: 4.44rem;
   }
 
-  .dreams-container-inner {
-    flex-basis: 100%;
-  } 
-
   .dreams-container-inner p {
     padding-bottom: 1.667rem;
   }
 
-  .dreams-container-inner a {
-    max-width: 100%;
-    min-width: 0;
-  }
   .form-container .h3{
     font-size: 1.33rem;
     margin-bottom: 1.5rem;
@@ -603,7 +597,7 @@ footer a {
   }
 
   .footer-icons {
-    height: 38%;
+    height: 42%;
   }
 
   .copyright {
@@ -618,15 +612,14 @@ footer a {
   .copyright {
     margin-left: 1.11rem;
   }
-
-
-
-
-
-
-
-
-  
 }
+
+@media only screen and (min-width: 466px) and (max-width: 576px) {
+  .dreams-container .dreams-container-inner:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+
 
 
